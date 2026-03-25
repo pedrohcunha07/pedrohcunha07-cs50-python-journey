@@ -3,7 +3,6 @@ filmes = {
     'Batman': {'preço': 45.00, 'idade': 16},
     'Homem-Aranha': {'preço': 40.00, 'idade': 12}, 
     'Scary Movie': {'preço': 45.00, 'idade': 16},
-    '2DIE4': {'preço': 45.00, 'idade': 16},
     'Super Mario Bros': {'preço': 40.00, 'idade': 6}
     
 }
@@ -23,8 +22,10 @@ def busca_filme():
             if escolha_idade < filmes[escolha_filme]['idade']:
                 print('Idade insuficiente. Escolha outro filme')
                 continue
+                
             
             quant_ingressos = int(input('Quantos ingressos? '))
+                
             total += quant_ingressos * filmes[escolha_filme]['preço']
             
 
