@@ -69,11 +69,11 @@ def main():
                 
             elif option == 2:
                 total += liberar_nave()
-                print(f'Total: Space${total:.2f}')
+                print(f'Total: C${total:.2f}')
                 
             elif option == 3:
-                exibir = exibir_patio()
-                print(exibir)
+                exibir_patio()
+                
                 
         except ValueError:
             print('Valor inválido.')
@@ -81,4 +81,3 @@ def main():
             
          
 main()
-            
