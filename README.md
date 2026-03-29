@@ -26,7 +26,7 @@ Refactoring this system was like performing a **Retopology**: removing redundant
 This module focused on writing resilient code that can handle unexpected user behavior without crashing.
 
 ### 📝 Technical Documentation:
-- **`parking_system.py`**: A complete management system featuring modular functions (`main`, `estacionar`, `liberar`, `exibir_patio`) and advanced error handling.
+- **`estacionamento.py`**: A complete management system featuring modular functions (`main`, `estacionar`, `liberar`, `exibir_patio`) and advanced error handling.
 - **`fuel.py`**: Handles input validation for fractions, catching `ZeroDivisionError` and `ValueError`.
 - **`taqueria.py`**: Manages a restaurant menu using dictionary lookups and handling `EOFError` for clean exits.
 
