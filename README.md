@@ -1,57 +1,33 @@
+# Real-Time Data Integration & CLI Tools (CS50P - Week 4)
 
-# 🎓 CS50P - Python Journey (HarvardX)
+This repository contains projects developed during **Harvard's CS50P Week 4**, focusing on the power of **Libraries** and **API Integration**. 
 
-This repository tracks my progress through Harvard's **CS50's Introduction to Programming with Python**, focusing on professional standards, robust logic, and systems analysis.
+## Projects Overview
 
----
+### 1. Currency Converter (USD to BRL)
+A CLI tool that fetches real-time exchange rates from the **AwesomeAPI**.
+- **Input:** Amount in USD via Command-Line Arguments.
+- **Output:** Current value in BRL formatted to two decimal places.
 
-## 🚀 Project Spotlight: Intergalactic Parking System (Week 3 Final)
+### 2. Pokémon Skill Finder
+Interacts with the **PokeAPI** to retrieve and list a specific Pokémon's abilities.
+- **Complexity:** Handles deeply nested JSON structures and dynamic URL parameters.
 
-This project was my "Final Boss" for **Week 3 (Exceptions & Dictionaries)**. I designed it to move beyond basic exercises and force myself to handle complex logic, nested data structures, and the **EAFP** philosophy independently.
+## Key Technical Concepts
 
-### 🛠️ Technical Highlights:
-- **Philosophy (EAFP):** Implemented robust `try/except` blocks to handle `KeyError` (invalid ship models/names) and `ValueError` (invalid time/menu inputs), ensuring the system never crashes due to "dirty" user input.
-- **Data Architecture:** Utilized **Nested Dictionaries** to map unique ship names to specific models and cross-reference them with a static pricing catalog. This allows for high **Scalability**—adding new models requires zero changes to the core logic.
-- **Atomic State Management:** Used the `.pop()` method to safely remove ships from the yard while simultaneously retrieving their model data for billing, ensuring **Data Integrity**.
-- **Logic Safeguards:** Implemented validation to prevent negative billing and handle "non-existent" ships gracefully.
+### 🔹 Third-Party Libraries & Connectivity
+Leveraged the `requests` library to break the "localhost" barrier, allowing the software to communicate with global servers via HTTP requests.
 
-### 🔹 The "Design 3D" Connection: Logic Retopology
-As a 3D Designer (Blender), I see code logic as **Mesh Topology**. An infinite loop or an unhandled exception is like a *non-manifold* geometry—it crashes the "render" (execution). 
-Refactoring this system was like performing a **Retopology**: removing redundant `if/else` "polygons" and replacing them with a clean, efficient `try/except` flow.
+### 🔹 Command-Line Interface (CLI)
+Implementation of `sys.argv` to create professional-grade scripts. This approach removes the need for interactive prompts, making the tools scriptable and automatable.
 
----
+### 🔹 Resilience & Error Handling (EAFP)
+Following the "Easier to Ask for Forgiveness than Permission" philosophy, the code is guarded against:
+- **Network Failures:** `HTTPError`, `ConnectionError`, and `Timeout`.
+- **User Input Errors:** Using `ValueError` to catch non-numeric entries.
+- **API Exceptions:** Handling missing endpoints or invalid data keys.
 
-## 📁 Week 3 - Module Overview (Exceptions)
+## How to Run
 
-This module focused on writing resilient code that can handle unexpected user behavior without crashing.
-
-### 📝 Technical Documentation:
-- **`estacionamento.py`**: A complete management system featuring modular functions (`main`, `estacionar`, `liberar`, `exibir_patio`) and advanced error handling.
-- **`fuel.py`**: Handles input validation for fractions, catching `ZeroDivisionError` and `ValueError`.
-- **`taqueria.py`**: Manages a restaurant menu using dictionary lookups and handling `EOFError` for clean exits.
-
----
-
-## 🏁 How to Run
-1. Ensure you have **Python 3.x** installed.
-2. Clone this repository: `git clone https://github.com/pedrohcunha07/pedrohcunha07-cs50-python-journey.git`
-3. Navigate to the desired script and run: `python script_name.py`
-
-## 🚀 Project Spotlight: Intergalactic Parking Management System
-
-This project was my "Final Boss" for **CS50P Week 3**. It was designed to move beyond basic exercises and force me to handle complex logic, nested data structures, and the **EAFP** philosophy independently.
-
-### 🛠️ Technical Highlights:
-- **EAFP Philosophy:** Implemented robust `try/except` blocks to handle `KeyError` (invalid ship models/names) and `ValueError` (invalid time/menu inputs), ensuring the system never crashes due to "dirty" user input.
-- **Data Architecture:** Utilized **Nested Dictionaries** to map unique ship names to specific models and cross-reference them with a static pricing catalog.
-- **Atomic State Management:** Used the `.pop()` method to safely remove ships from the yard while simultaneously retrieving their model data for billing—ensuring data integrity.
-- **Revenue Protection:** Implemented logic to prevent negative billing and handle "non-existent" ships gracefully.
-
-### 🔹 The "Design 3D" Analogy: Clean Topology
-As a 3D Designer (Blender), I see code logic as **Mesh Topology**. An infinite loop or an unhandled exception is like a *non-manifold* geometry or a broken subdivision—it crashes the "render" (execution). 
-Refactoring this system was like performing a **Retopology**: removing redundant `if/else` "polygons" and replacing them with a clean, efficient `try/except` flow.
-
-### 📂 Files:
-- `estacionamento.py`: The full Intergalactic Parking System implementation.
-- `fuel.py` & `taqueria.py`: Official Harvard Problem Sets for Week 3.
-
+- pip install requests
+- python converter.py 100
