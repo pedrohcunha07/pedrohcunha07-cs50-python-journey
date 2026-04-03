@@ -9,10 +9,6 @@ A CLI tool that fetches real-time exchange rates from the **AwesomeAPI**.
 - **Input:** Amount in USD via Command-Line Arguments.
 - **Output:** Current value in BRL formatted to two decimal places.
 
-### 2. Pokémon Skill Finder
-Interacts with the **PokeAPI** to retrieve and list a specific Pokémon's abilities.
-- **Complexity:** Handles deeply nested JSON structures and dynamic URL parameters.
-
 ## Key Technical Concepts
 
 ### 🔹 Third-Party Libraries & Connectivity
