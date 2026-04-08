@@ -18,6 +18,19 @@ The main objective was to build a robust command-line application that manages c
 3. The user has 3 chances to answer correctly.
 4. If the user fails 3 times, the correct answer is displayed.
 5. Finally, the program outputs the total score out of 10.
+## Key Technical Concepts
+
+### 🔹 Third-Party Libraries & Connectivity
+Leveraged the `requests` library to break the "localhost" barrier, allowing the software to communicate with global servers via HTTP requests.
+
+### 🔹 Command-Line Interface (CLI)
+Implementation of `sys.argv` to create professional-grade scripts. This approach removes the need for interactive prompts, making the tools scriptable and automatable.
+
+### 🔹 Resilience & Error Handling (EAFP)
+Following the "Easier to Ask for Forgiveness than Permission" philosophy, the code is guarded against:
+- **Network Failures:** `HTTPError`, `ConnectionError`, and `Timeout`.
+- **User Input Errors:** Using `ValueError` to catch non-numeric entries.
+- **API Exceptions:** Handling missing endpoints or invalid data keys.
 
 ## How to Run
 ```bash
