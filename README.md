@@ -31,4 +31,13 @@ The **Poké-Card Generator** is a CLI tool that fetches real-time data from the 
 2. **Run the program:**
    ```bash
    python pokemon2.py pokemon name
+
+<img width="484" height="290" alt="Screenshot 2026-04-15 124151" src="https://github.com/user-attachments/assets/7bd77eaf-6ff3-4b74-ad39-da49cdf4802d" />
+
+<img width="969" height="372" alt="Screenshot 2026-04-15 124242" src="https://github.com/user-attachments/assets/fa715cf9-ef21-48bd-b90d-571aac7cd8fc" />
+
+<img width="495" height="231" alt="Screenshot 2026-04-15 124035" src="https://github.com/user-attachments/assets/b464173e-58d8-44ba-a4d1-a8a83cfd436b" />
+
+
+
    
