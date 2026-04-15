@@ -1,37 +1,34 @@
-# Little Professor - Math Practice Simulator
+# Poké-Card CLI Generator
 
-This project is part of Harvard's **CS50's Introduction to Programming with Python (Week 4)**. It simulates an educational math tool that generates addition problems based on a chosen difficulty level, challenging the user to solve 10 consecutive equations.
+This project is an advanced implementation developed during **Week 4 (Libraries)** of Harvard's **CS50P**. It serves as a comprehensive capstone for the module, integrating command-line arguments, external APIs, and third-party styling libraries.
 
-## Goals
-The main objective was to build a robust command-line application that manages complex loops and strictly validates user input without crashing.
+## Project Overview
+The **Poké-Card Generator** is a CLI tool that fetches real-time data from the [PokéAPI](https://pokeapi.co/) and generates a stylized "info card" in the terminal. It transforms raw JSON data into a visually appealing layout using ASCII art and grammatically correct text formatting.
 
-## Technical Highlights
+## Features
 
-- **Nested Loop Logic:** Implemented a main loop for 10 math problems, with an internal sub-loop allowing up to 3 attempts per question.
-- **Dynamic Integer Generation:** Developed a custom function to generate random integers based on the number of digits (Level 1, 2, or 3), handling specific constraints like including zero only in Level 1.
-- **Defensive Programming:** Used `try/except` blocks to handle non-numeric inputs and `raise ValueError` to enforce function contracts.
-- **Modular Architecture:** Structured the program into distinct functions (`main`, `get_level`, and `generate_integer`) to ensure code reusability and clean execution.
+- **External API Integration:** Consumes RESTful data using the `requests` library, including robust error handling for network timeouts and 404 status codes.
+- **Nested JSON Navigation:** Implements complex data mining to extract information from nested dictionaries and lists (e.g., retrieving specific ability names from multiple layers of nesting).
+- **The Accumulator Pattern:** Utilizes loops and `.append()` to dynamically build lists of Pokémon skills.
+- **Modular Architecture:** The program is divided into specialized "Worker" functions for data fetching, font rendering, and text formatting, orchestrated by a "Manager" (`main`) function.
+- **Tuple Unpacking:** Efficiently handles multiple return values from functions to keep the code clean and "Pythonic."
 
-## How it Works
-1. The program asks for a difficulty level (1, 2, or 3).
-2. It generates 10 addition problems (e.g., `X + Y = ?`).
-3. The user has 3 chances to answer correctly.
-4. If the user fails 3 times, the correct answer is displayed.
-5. Finally, the program outputs the total score out of 10.
-## Key Technical Concepts
+## Libraries Used
 
-### 🔹 Third-Party Libraries & Connectivity
-Leveraged the `requests` library to break the "localhost" barrier, allowing the software to communicate with global servers via HTTP requests.
+| Library | Purpose |
+| :--- | :--- |
+| `requests` | To communicate with the PokéAPI and retrieve Pokémon data. |
+| `pyfiglet` | To convert the Pokémon's name into stylized ASCII Art. |
+| `inflect` | To format the list of abilities using the Oxford Comma. |
+| `sys` | To handle command-line arguments. |
+| `random` | To select a different font style for every search. |
 
-### 🔹 Command-Line Interface (CLI)
-Implementation of `sys.argv` to create professional-grade scripts. This approach removes the need for interactive prompts, making the tools scriptable and automatable.
+## 📖 How to Use
 
-### 🔹 Resilience & Error Handling (EAFP)
-Following the "Easier to Ask for Forgiveness than Permission" philosophy, the code is guarded against:
-- **Network Failures:** `HTTPError`, `ConnectionError`, and `Timeout`.
-- **User Input Errors:** Using `ValueError` to catch non-numeric entries.
-- **API Exceptions:** Handling missing endpoints or invalid data keys.
-
-## How to Run
-```bash
-python professor.py
+1. **Install Dependencies:**
+   ```bash
+   pip install requests pyfiglet inflect
+2. **Run the program:**
+   ```bash
+   python pokemon2.py pokemon name
+   
