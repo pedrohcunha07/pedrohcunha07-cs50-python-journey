@@ -1,4 +1,4 @@
-# My progress through Harvard's CS50P, focusing on professional Python standards and logic for my Systems Analysis degree.
+# pedrohcunha07-cs50-python-journey
 ## Start of Unit-Testing on CS50P Course with -bank.py
 
 ## This project contains the implementation of the "Home Federal Savings Bank" problem and its respective unit tests, developed as part of Harvard's CS50's Introduction to Programming with Python.
